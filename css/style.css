@@ -1,0 +1,192 @@
+/* CSS for Navigation */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* z-index: 1; */
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+  pointer-events: none;
+}
+
+/* End of CSS for Navigation */
+body {
+  /* background-color: #2196F3; */
+  background-image: url("../Images/Ark.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Images CSS */
+
+img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+h1 {
+  color: green;
+}
+
+#happy {
+  color: yellow;
+}
+
+.list{
+  color: purple;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  /* background-color: #2196F3; */
+  padding: 20px;
+  gap: 30px;
+  position: relative;
+  top: 40px;
+  z-index: -1;
+}
+
+#name {
+  font-size: 30px;
+  grid-column: 1/3;
+}
+
+#headings {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  animation: slide-right 2s;
+}
+
+#para {
+  font-size: 40px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  animation: slide-left 2s;
+}
+
+#link {
+  background-image: url("../Images/CIV.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  grid-column: 2/3;
+  grid-row: 3/4;
+  animation: slide-left 2s;
+}
+
+#list1 {
+  font-size: 50px;
+  font-weight: bold;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  animation: slide-left 2s;
+}
+
+#list2 {
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  animation: slide-left 2s;
+}
+
+.borders {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+#grid2 {
+  grid-column:1/2;
+  grid-row: 4/5;
+  animation: slide-right 2s;
+}
+.Subitems {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 30px;
+}
+.borders2 {
+  border-radius: 10px 0px 10px 0px;
+  border-style: dashed;
+  background-image: linear-gradient(lime,yellow);
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 5px 10px purple;
+}
+
+#message {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  animation: slide-right 2s;
+}
+
+table, th, td {
+  height: 200px;
+  width: 500px;
+  border: 2px solid black;
+  border-style: dotted;
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);}
+  to { transform: translate3d(0, 20px, 0);}
+}
+table td p {
+  font-size: 20px;
+  font-family: fantasy;
+  animation: bounce 0.5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide-left {
+  from {
+    margin-right: -150%;
+  } to {
+    margin-right: 0%;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -150%;
+  } to {
+    margin-left: 0%;
+  }
+}
